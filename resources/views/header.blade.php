@@ -19,11 +19,11 @@ if (Session::has('user')) {
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Orders</a>
+                    <a class="nav-link active" aria-current="page" href="/myorders">Orders</a>
                 </li>
             </ul>
-            <form class="d-flex me-auto" role="search">
-                <input class="form-control me-2 px-5" type="search" placeholder="Search" aria-label="Search">
+            <form action="/search" class="d-flex me-auto" role="search">
+                <input class="form-control me-2 px-5" type="search" name="query" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <ul class="navbar-nav mb-2 mb-lg-0 me-2 ">
@@ -31,7 +31,7 @@ if (Session::has('user')) {
                     <i class="bi bi-cart2 "></i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart2 fw-bold" viewBox="0 0 16 16">
                         <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
                       </svg>
-                    <a class="nav-link " href="#">Cart({{$total}})</a>
+                    <a class="nav-link " href="/cartlist">Cart({{$total}})</a>
                 </li>
                 @if (Session::has('user'))
                 <li class="nav-item dropdown">
@@ -44,6 +44,8 @@ if (Session::has('user')) {
                   </li> 
                 @else
                     <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+
                 @endif
                 
             </ul>

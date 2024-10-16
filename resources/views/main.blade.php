@@ -46,5 +46,9 @@
     .trending-wrapper{
         padding: 20px;
     }
+    a{
+        text-decoration: none;
+        margin-left: 20px;
+    }
 </style>
 </html>
