@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+
 </head>
 
 <body>
@@ -22,9 +23,28 @@
 </body>
 <style>
     .container{
-        height: 500px;
+        height: 600px;
         padding-top: 100px;
     }
-    
+    .product-container{
+        height: 650px;
+    }
+    img.slider-img{
+        /* width: 100%; */
+        height: 400px !important  
+    }
+    .carousel-caption{
+      background-color: greenyellow;
+    }
+    .trending-items{
+      float: left;
+      width: 33.33%;
+    }
+    .trending-image{
+        height: 100px;
+    }
+    .trending-wrapper{
+        padding: 20px;
+    }
 </style>
 </html>
